@@ -38,5 +38,5 @@ Pod::Spec.new do |s|
   s.ios.exclude_files = 'Classes/osx'
   s.osx.exclude_files = 'Classes/ios'
 
-  s.dependency 'FMDB', '~> 2.0'
+  s.dependency 'FMDB/SQLCipher', '~> 2.0'
 end
