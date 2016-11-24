@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
 
   s.default_subspec = 'standard'
 
-    sp.subspec 'standard' do |sp|
+  s.subspec 'standard' do |sp|
     
     sp.source_files = 'Classes'
 
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
 
     sp.ios.exclude_files = 'Classes/osx'
     sp.osx.exclude_files = 'Classes/ios'
-    
+
     sp.dependency 'FMDB/SQLCipher', '~> 2.0'
   end
 end
