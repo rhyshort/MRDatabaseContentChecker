@@ -33,18 +33,27 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.8'
   s.requires_arc = true
 
-  s.source_files = 'Classes'
 
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
 
   s.default_subspec = 'standard'
-  
-  s.subspec 'standard' do |sp|
+
+    sp.subspec 'standard' do |sp|
+    
+    sp.source_files = 'Classes'
+
+    sp.ios.exclude_files = 'Classes/osx'
+    sp.osx.exclude_files = 'Classes/ios'
+
     sp.dependency 'FMDB', '~> 2.0'
   end
 
   s.subspec  'SQLCipher' do | sp |
+
+    sp.source_files = 'Classes'
+
+    sp.ios.exclude_files = 'Classes/osx'
+    sp.osx.exclude_files = 'Classes/ios'
+    
     sp.dependency 'FMDB/SQLCipher', '~> 2.0'
   end
 end
